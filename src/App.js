@@ -36,7 +36,7 @@ function App() {
             <h2>Name: {pokemon}</h2>
             <p>Height: {height}</p>
             <p>Weight: {weight}</p>
-            <img src={`http://assets.pokemon.com/assets/cms2/img/pokedex/full/${url_image}`} />
+            <img src={url_image} />
           </div>
         ))}
       </header>
