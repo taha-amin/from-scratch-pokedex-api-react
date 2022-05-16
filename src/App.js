@@ -4,7 +4,7 @@ import { getPokemons } from './services/fetch-utils';
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-  const [query, setQuery] = useState('char');
+  const [query, setQuery] = useState('a');
 
   async function load() {
     const {
@@ -31,10 +31,11 @@ function App() {
         <button>Search</button>
       </form>
       <header className="App-header">
-        {pokemons.map(({ pokemon, generation_id, url_image }, i) => (
+        {pokemons.map(({ pokemon, height, weight, url_image }, i) => (
           <div key={pokemon + i}>
-            <h2>{pokemon}</h2>
-            <p>{generation_id}</p>
+            <h2>Name: {pokemon}</h2>
+            <p>Height: {height}</p>
+            <p>Weight: {weight}</p>
             <img src={`http://assets.pokemon.com/assets/cms2/img/pokedex/full/${url_image}`} />
           </div>
         ))}
